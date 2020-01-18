@@ -1,0 +1,12 @@
+db.nyt.aggregate({$match: {"publisher":"Harper"}}, {$group: {_id:"$title", num_weeks: {$sum:"$weeks_on_list"}}}, {$match: {num_weeks: {$gte:5}}}, {$sort: {num_weeks: -1}}, {$limit:10})
+
+{ "_id" : "GO SET A WATCHMAN", "num_weeks" : 630 }
+{ "_id" : "COMMONWEALTH", "num_weeks" : 171 }
+{ "_id" : "THE FIRST PHONE CALL FROM HEAVEN", "num_weeks" : 120 }
+{ "_id" : "THE HOUR I FIRST BELIEVED", "num_weeks" : 78 }
+{ "_id" : "THE MAGIC STRINGS OF FRANKIE PRESTO", "num_weeks" : 45 }
+{ "_id" : "THE ENGLISH SPY", "num_weeks" : 28 }
+{ "_id" : "THE BLACK WIDOW", "num_weeks" : 28 }
+{ "_id" : "THE ENGLISH GIRL", "num_weeks" : 28 }
+{ "_id" : "HOUSE OF SPIES", "num_weeks" : 21 }
+{ "_id" : "THE HEIST", "num_weeks" : 21 }

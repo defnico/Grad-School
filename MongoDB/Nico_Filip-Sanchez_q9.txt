@@ -1,0 +1,3 @@
+db.nyt.aggregate({$group: {_id: {author: "$author", tit: "$title"}}}, {$group: {_id: {author: "$_id.author"}, num_books: {$sum: 1}}}, {$sort: {num_books:-1}}, {$limit:1})
+
+{ "_id" : { "author" : "Danielle Steel" }, "num_books" : 40 }

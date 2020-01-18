@@ -1,0 +1,3 @@
+db.nyt.aggregate({$match:{"publisher":"Harper"}},{$group:{_id: {tit:"$title", max_price:{$max: "$price"}}}}, {$group: {_id:null, avg:{$avg:"$_id.max_price"}}}, {$project:{_id: 0}})
+
+{ "avg" : NumberDecimal("4.149230769230769230769230769230769") }

@@ -1,0 +1,3 @@
+db.nyt.distinct("title", {"title":/history/i}).length
+
+2

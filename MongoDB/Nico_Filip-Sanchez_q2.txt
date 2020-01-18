@@ -1,0 +1,3 @@
+db.nyt.distinct("title", {"rank":1}).length
+
+328

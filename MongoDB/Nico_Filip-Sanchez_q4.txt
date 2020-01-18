@@ -1,0 +1,22 @@
+db.nyt.aggregate({$group: {_id:{pub:"$publisher", tit:"$title"}}}, {$group:{_id:"$_id.pub", num_books:{$sum:1}}}, {$limit:20})
+
+{ "_id" : "Knopf/McSweeney's", "num_books" : 1 }
+{ "_id" : "Penguin", "num_books" : 1 }
+{ "_id" : "Bloomsbury", "num_books" : 2 }
+{ "_id" : "Atria/Emily Bestler Books", "num_books" : 1 }
+{ "_id" : "Tor/TomDoherty", "num_books" : 1 }
+{ "_id" : "Doherty", "num_books" : 1 }
+{ "_id" : "Harlequin Mira", "num_books" : 2 }
+{ "_id" : "ECW Press", "num_books" : 1 }
+{ "_id" : "Blue Rider", "num_books" : 1 }
+{ "_id" : "Tom Doherty/Forge", "num_books" : 1 }
+{ "_id" : "Morrow/HarperCollins Publishers", "num_books" : 1 }
+{ "_id" : "Berkeley Prime Crime", "num_books" : 1 }
+{ "_id" : "Thomas Dunne/St. Martin’s", "num_books" : 2 }
+{ "_id" : "Knopf Publishing Group", "num_books" : 1 }
+{ "_id" : "Voice", "num_books" : 1 }
+{ "_id" : "Delacorte Press", "num_books" : 2 }
+{ "_id" : "Pocket", "num_books" : 1 }
+{ "_id" : "Thomas Dunne", "num_books" : 2 }
+{ "_id" : "Del Rey/ Ballantine", "num_books" : 1 }
+{ "_id" : "St. Martin''s", "num_books" : 2 }

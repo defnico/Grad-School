@@ -1,0 +1,3 @@
+db.nyt.aggregate({$match: {"rank":{$lte:20}}}, {$group: {_id:null, maxprice:{$max:"$price"}}}, {$project:{_id:0}})
+
+{ "maxprice" : 36 }

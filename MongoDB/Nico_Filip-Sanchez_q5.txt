@@ -1,0 +1,22 @@
+db.nyt.aggregate({$group: {_id:{pub:"$publisher", tit:"$title"}}}, {$group:{_id:"$_id.pub", num_books:{$sum:1}}}, {$match:{num_books:{$gte:10}}}, {$limit:20})
+
+{ "_id" : "Hyperion", "num_books" : 13 }
+{ "_id" : "Morrow", "num_books" : 37 }
+{ "_id" : "Morrow/HarperCollins", "num_books" : 82 }
+{ "_id" : "Harper/HarperCollins", "num_books" : 34 }
+{ "_id" : "Pantheon", "num_books" : 15 }
+{ "_id" : "Del Rey", "num_books" : 36 }
+{ "_id" : "Ace", "num_books" : 30 }
+{ "_id" : "Minotaur", "num_books" : 34 }
+{ "_id" : "Little, Brown", "num_books" : 122 }
+{ "_id" : "Knopf", "num_books" : 96 }
+{ "_id" : "Dutton", "num_books" : 71 }
+{ "_id" : "St. Martin's", "num_books" : 85 }
+{ "_id" : "Kensington", "num_books" : 21 }
+{ "_id" : "Scribner", "num_books" : 52 }
+{ "_id" : "Berkley", "num_books" : 37 }
+{ "_id" : "Bantam", "num_books" : 59 }
+{ "_id" : "Atria", "num_books" : 51 }
+{ "_id" : "Tor/Tom Doherty", "num_books" : 25 }
+{ "_id" : "Putnam", "num_books" : 293 }
+{ "_id" : "Emily Bestler/Atria", "num_books" : 13 }
